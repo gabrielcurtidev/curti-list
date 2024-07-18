@@ -24,6 +24,7 @@
 body{
     font-family: "Poppins", sans-serif;
     position: relative;
+    background-color: var(--white1);
 }
 
 .navbar-left{
@@ -38,7 +39,6 @@ body{
     width: 284px;
     height: 100vh;
     flex-shrink: 0;
-    border-radius: 0px 40px 40px 0px;
     padding: 2rem;
 }
 
@@ -72,6 +72,7 @@ body{
     font-weight: 300;
     line-height: normal;
     margin-bottom: 8px;
+    cursor: pointer;
     transition: all .3s;
 }
 
@@ -104,6 +105,7 @@ body{
     height: 53px;
     flex-shrink: 0;
     border-radius: 8px;
+    cursor: pointer;
     
 }
 
@@ -115,7 +117,7 @@ body{
     flex-shrink: 0;
     right: 0;
     border-radius: 0 8px 8px 0;
-    opacity: 0;
+    cursor: pointer;
     
 }
 
@@ -126,8 +128,4 @@ body{
     font-weight: 600;
     line-height: normal;
     margin-right: 6px;
-}
-
-.todo-namelist:hover .del-namelist{
-    opacity: 1;
 }
