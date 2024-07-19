@@ -95,7 +95,7 @@ body{
     outline: none;
 }
 
-.todo-namelist{
+.todoName{
     position: relative;
     text-transform: uppercase;
     background-color: var(--blue1);
@@ -122,7 +122,7 @@ body{
     
 }
 
-.todo-namelist h2{
+.todoName h2{
     color: var(--marineBlue);
     font-size: 20px;
     font-style: normal;
