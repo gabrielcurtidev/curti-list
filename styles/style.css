@@ -16,6 +16,7 @@
     --darkBlue: #141526;
     --pink1: #F249B7;
     --greenConfirmed: #28A745;
+    --gray1: #D9D9D9;
     --fontPrimary:  font-family: "Poppins", sans-serif;
 }
 
@@ -87,7 +88,7 @@ body{
     border-radius: 8px;
     border: none;
     padding: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 3rem;
 }
 
 .input-namelist:focus{
@@ -106,7 +107,7 @@ body{
     flex-shrink: 0;
     border-radius: 8px;
     cursor: pointer;
-    
+    margin-bottom: 1.2rem;
 }
 
 .del-namelist{
@@ -128,4 +129,79 @@ body{
     font-weight: 600;
     line-height: normal;
     margin-right: 6px;
+}
+
+/*todo-list*/
+
+.todo-list{
+    margin-left: 284px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main{
+
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#add-list{
+    border: none;
+    padding: 6px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+#add-list:focus{
+    outline: none;
+}
+
+.btn-add{
+    background-color: var(--greenConfirmed);
+    color: var(--white1);
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.btn-add:hover{
+    transform: scale(1.02);
+}
+
+.todo{
+    border-radius: 8px;
+    border: 2px solid var(--gray1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50rem;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.check-btn,
+.delete-btn{
+    color: var(--marineBlue);
+    font-size: 2.5rem;
+}
+
+.todo h3{
+    text-transform: uppercase;
+}
+
+.todo.done{
+    background-color: var(--gray1);
+}
+
+.done h3{
+    font-style: italic;
+    text-decoration: line-through;
 }

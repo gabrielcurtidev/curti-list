@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
      <link rel="stylesheet" href="styles/style.css">
+     <!-- BOXICONS -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Curti ToDo List</title>
 </head>
 <body>
@@ -23,10 +25,32 @@
                 <h2>Nome Lista</h2>
                 <div class="del-namelist"></div>
             </div>
+
+            <div class="todo-namelist">
+                <h2>Nome Lista2</h2>
+                <div class="del-namelist"></div>
+            </div>
         </div>
     </div>
 
-    .
+    <div class="todo-list">
+        <div class="main">
+            <input type="text" id="add-list" placeholder="Adicionar tarefa">
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="todo">
+            <i class='bx bx-check check-btn' ></i>
+            <h3>Javascript</h3>
+            <i class='bx bx-x delete-btn' ></i>
+        </div>
+
+        <div class="todo done">
+            <i class='bx bx-check check-btn' ></i>
+            <h3>ADOBE ILLUSTRATOR</h3>
+            <i class='bx bx-x delete-btn' ></i>
+        </div>
+    </div>
     
 
     <script src="script.js"></script>
