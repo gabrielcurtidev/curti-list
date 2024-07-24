@@ -1,34 +1,35 @@
-const btnCreat = document.querySelector('.btn-creatlist')
-const createName = document.querySelector('.create-namelist')
-const navbarLeft = document.querySelector('.navbar-left')
-const todoInput = document.querySelector('.input-namelist')
+const startForm = document.querySelector('.start-form')
+const inputNameList = document.querySelector('.input-namelist')
+const createNameList = document.querySelector('.create-namelist')
+const todoName = document.querySelector('.todo-Name')
+const delNameList = document.querySelector('.del-namelist')
 
-const saveName = (text) => {
-    const todoName = document.createElement('div')
-    todoName.classList.add('todoName')
 
-    const todoTitle = document.createElement('h2')
-    todoTitle.innerText = text
-    todoName.appendChild(todoTitle)
+const saveTodo = (text) =>{
+    const createName = document.createElement('div')
+    createName.classList.add('todo-Name')
 
-    const todoDel = document.createElement('div')
-    todoDel.classList.add('del-namelist')
-    todoName.appendChild(todoDel)
-
+    const todoName = document.createElement('h2')
+    todoName.innerText = text
     createName.appendChild(todoName)
+
+    const delName = document.createElement('div')
+    delName.classList.add('del-namelist')
+    todoName.innerText = text
+    createName.appendChild(delName)
+
+    createNameList.appendChild(createName)
+
+
+
 }
 
-navbarLeft.addEventListener('submit', (e) =>{
+startForm.addEventListener('submit', (e) =>{
     e.preventDefault()
-    
 
-    const valueInput = todoInput.value
-
-    if(valueInput){
-        saveName(valueInput)
+    const inputValue = inputNameList.value;
+    if(inputValue){
+        saveTodo(inputValue)
     }
-
-    valueInput.value = ''
-    valueInput.focus()
-
+    
 })

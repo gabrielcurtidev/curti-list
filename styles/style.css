@@ -28,10 +28,15 @@ body{
     background-color: var(--white1);
 }
 
+/* container-todo */
+
+.container-todo{
+    display: flex;
+}
+
+/* ======================================= */
+
 .navbar-left{
-    position: absolute;
-    top: 0;
-    left: 0;
 
     display: flex;
     align-items: center;
@@ -59,7 +64,7 @@ body{
     align-items: center;
 }
 
-.create-namelist .btn-creatlist{
+.btn-creatlist{
     background-color: var(--blue1);
     color: var(--marineBlue);
     border: none;
@@ -77,11 +82,11 @@ body{
     transition: all .3s;
 }
 
-.create-namelist .btn-creatlist:hover{
+.btn-creatlist:hover{
     transform: scale(1.02);
 }
 
-.create-namelist .input-namelist{
+.input-namelist{
     width: 210px;
     height: 39px;
     flex-shrink: 0;
@@ -95,7 +100,7 @@ body{
     outline: none;
 }
 
-.todoName{
+.todo-Name{
     position: relative;
     text-transform: uppercase;
     background-color: var(--blue1);
@@ -122,7 +127,7 @@ body{
     
 }
 
-.todoName h2{
+.todo-Name h2{
     color: var(--marineBlue);
     font-size: 20px;
     font-style: normal;
@@ -134,12 +139,13 @@ body{
 /*todo-list*/
 
 .todo-list{
-    margin-left: 284px;
+    background-color: var(--white1)(--gray1);
     padding: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
 }
 
 .main{
@@ -184,6 +190,7 @@ body{
     width: 50rem;
     padding: 10px;
     margin-bottom: 1.5rem;
+    margin: 0 5px 1.5rem 5px;
     cursor: pointer;
 }
 
