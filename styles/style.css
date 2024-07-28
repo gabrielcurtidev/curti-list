@@ -32,6 +32,8 @@ body{
 
 .container-todo{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* ======================================= */
@@ -139,7 +141,7 @@ body{
 /*todo-list*/
 
 .todo-list{
-    background-color: var(--white1)(--gray1);
+    background-color: var(--white1);
     padding: 50px;
     display: flex;
     align-items: center;
