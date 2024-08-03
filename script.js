@@ -1,10 +1,11 @@
 let btnCreatlist = document.querySelector('.btn-creatlist')
 let createNamelist = document.querySelector('.create-namelist')
-let navbarLeft = document.querySelector('.navbar-left')
-let containerTodo = document.querySelector('.todo-Name')
+let containerTodo = document.querySelector('.todo-Name') 
+let todoRef = document.querySelector('.todo-ref') 
 
 btnCreatlist.addEventListener('click', ()=> {
-let inputValue = document.querySelector('.input-namelist').value.trim()
+    let navbarLeft = document.querySelector('.navbar-left')
+    let inputValue = document.querySelector('.input-namelist').value.trim()
     
     if(inputValue !== ''){
         let newElement = document.createElement('div')
@@ -15,18 +16,25 @@ let inputValue = document.querySelector('.input-namelist').value.trim()
         createNamelist.appendChild(todoName)
         
         let todoTitle = document.createElement('h2')
+        todoTitle.classList.add('todoRef')
         todoTitle.innerText = inputValue
-        containerTodo.appendChild(todoTitle)
+        todoName.appendChild(todoTitle)
         
         let todoDelName = document.createElement('div')
-        todoDelName.classList('del-namelist')
-        containerTodo.appendChild(todoDelName)
+        todoDelName.classList.add('del-namelist')
+        todoName.appendChild(todoDelName)
         
         navbarLeft.appendChild(newElement)
 
-  
     }
 
-    
-
 })
+
+createNamelist.addEventListener('click', (e) => {
+    let elTarget = e.target;
+    let elParent = elTarget.closest('.todoRef');
+
+    if (elTarget.classList.contains('del-namelist')) {
+        elParent.remove();
+    }
+});
