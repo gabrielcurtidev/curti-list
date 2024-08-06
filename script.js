@@ -26,15 +26,19 @@ btnCreatlist.addEventListener('click', ()=> {
         
         navbarLeft.appendChild(newElement)
 
+        
+        document.querySelector('.input-namelist').value = ''
+        document.querySelector('.input-namelist').focus()
+
     }
 
 })
 
 createNamelist.addEventListener('click', (e) => {
     let elTarget = e.target;
-    let elParent = elTarget.closest('.todoRef');
+    let elParent = elTarget.closest('.todo-Name');
 
-    if (elTarget.classList.contains('del-namelist')) {
+    if (elTarget.classList.contains('todoRef')) {
         elParent.remove();
     }
 });
