@@ -7,6 +7,11 @@ btnCreatlist.addEventListener('click', ()=> {
     let navbarLeft = document.querySelector('.navbar-left')
     let inputValue = document.querySelector('.input-namelist').value.trim()
     
+    if(inputValue === ''){
+        alert('ERRO!!!.....Escreva algo no nome da lista!')
+        return
+    }
+    
     if(inputValue !== ''){
         let newElement = document.createElement('div')
         newElement.classList.add('create-namelist')
@@ -34,10 +39,6 @@ btnCreatlist.addEventListener('click', ()=> {
 
     }
 
-    if(inputValue === ''){
-        alert('ERRO!!!.....Escreva algo no nome da lista!')
-        return
-    }
 
 })
 
