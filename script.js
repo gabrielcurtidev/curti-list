@@ -21,7 +21,9 @@ btnCreatlist.addEventListener('click', ()=> {
         todoName.appendChild(todoTitle)
         
         let todoDelName = document.createElement('div')
-        todoDelName.classList.add('del-namelist')
+        let icon = document.createElement('i')
+        icon.classList.add('bx', 'bxs-x-square', 'del-namelist')
+        todoDelName.appendChild(icon)
         todoName.appendChild(todoDelName)
         
         navbarLeft.appendChild(newElement)
@@ -32,13 +34,22 @@ btnCreatlist.addEventListener('click', ()=> {
 
     }
 
+    if(inputValue === ''){
+        alert('ERRO!!!.....Escreva algo no nome da lista!')
+        return
+    }
+
 })
 
 createNamelist.addEventListener('click', (e) => {
     let elTarget = e.target;
     let elParent = elTarget.closest('.todo-Name');
 
-    if (elTarget.classList.contains('todoRef')) {
+    if (elTarget.classList.contains('del-namelist')) {
         elParent.remove();
     }
 });
+
+// ==========================================================
+
+
